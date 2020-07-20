@@ -1,0 +1,249 @@
+{
+	"info": {
+		"_postman_id": "fad5ef48-7d5d-43cc-b7eb-9cfe3a7314de",
+		"name": "NinjaChef",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cozinheiro-Web",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"fernando@bol.com.br\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://ninjachef-api-qaninja-io.umbler.net/sessions",
+							"protocol": "http",
+							"host": [
+								"ninjachef-api-qaninja-io",
+								"umbler",
+								"net"
+							],
+							"path": [
+								"sessions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Novo Produto",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							},
+							{
+								"key": "user_id",
+								"value": "5e3c88730bc2be0017e3194e",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "thumbnail",
+									"type": "file",
+									"src": "/Users/papito/Work/bootcamp/robotstack/live6/api/resources/img/yahoo.jpg"
+								},
+								{
+									"key": "name",
+									"value": "Yahoo",
+									"type": "text"
+								},
+								{
+									"key": "plate",
+									"value": "Sopa",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "10",
+									"type": "text"
+								}
+							],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "http://ninjachef-api-qaninja-io.umbler.net/products",
+							"protocol": "http",
+							"host": [
+								"ninjachef-api-qaninja-io",
+								"umbler",
+								"net"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Meus produtos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "user_id",
+								"type": "text",
+								"value": "5e3a1439606b8800174022e5"
+							}
+						],
+						"url": {
+							"raw": "http://ninjachef-api-qaninja-io.umbler.net/dashboard",
+							"protocol": "http",
+							"host": [
+								"ninjachef-api-qaninja-io",
+								"umbler",
+								"net"
+							],
+							"path": [
+								"dashboard"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Cliente-Mobile",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"fernando@bol.com.br\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://ninjachef-api-qaninja-io.umbler.net/sessions",
+							"protocol": "http",
+							"host": [
+								"ninjachef-api-qaninja-io",
+								"umbler",
+								"net"
+							],
+							"path": [
+								"sessions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pedido",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "user_id",
+								"type": "text",
+								"value": "5e3c2c1c0bc2be0017e3190e"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"date\": \"12/12/2019\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://ninjachef-api-qaninja-io.umbler.net/products/5e3c59b80bc2be0017e31923/orders",
+							"protocol": "http",
+							"host": [
+								"ninjachef-api-qaninja-io",
+								"umbler",
+								"net"
+							],
+							"path": [
+								"products",
+								"5e3c59b80bc2be0017e31923",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "14d5a483-9dba-43fd-901c-eaea96ce2b42",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "8289a536-3bf0-4577-a4e7-e36996af886a",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
